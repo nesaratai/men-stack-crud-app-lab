@@ -19,7 +19,7 @@ mongoose.connection.on("connected", () => {
 // Import the Cars model
 const Cars = require('./models/cars.js')
 
-app.get("/", async (req, res) => {
+app.get("/cars", async (req, res) => {
     res.render("index.ejs");
   });
 
@@ -28,7 +28,7 @@ app.get("/cars/newcar", (req, res) => {
     res.render("/cars/newcar.ejs");
   });
 
-app.get("/cars", async (req, res) => {
+app.get("/carscoll", async (req, res) => {
     const allCars = await Cars.find();
     res.render("cars/carscoll.ejs", { cars: allCars });
   });
