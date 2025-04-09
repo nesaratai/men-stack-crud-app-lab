@@ -1,0 +1,32 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add your Favorite Car</title>
+  </head>
+  <body>
+    <h1>Add your favorite Car.</h1>
+    <form action="/cars" method="POST">
+        <label for="Year">Year:</label>
+        <input type="number" name="Year" id="car" /><br><br>
+    
+        <label for="Make">Make:</label>
+        <input type="text" name="Make" id="car" /><br><br>
+
+        <label for="Model">Model:</label>
+        <input type="text" name="Model" id="car" /><br><br>
+
+        <label for="Trim">Trim:</label>
+        <input type="text" name="Trim" id="car" /><br><br>
+
+        <label for="Price">Price:</label>
+        <input type="number" required step="any" name="Price" id="car" /><br><br>
+
+        <button type="submit">Add Car</button>
+      </form>
+      <a href="/views/index.ejs">Back to Home Page</a>
+  </body>
+</html>
