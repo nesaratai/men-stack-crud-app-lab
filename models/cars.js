@@ -6,6 +6,7 @@ const CarsSchema = new mongoose.Schema({
     Model: String,
     Trim: String,
     Price: Number,
+    Description: String
   });
 
   const Cars = mongoose.model("Cars", CarsSchema);

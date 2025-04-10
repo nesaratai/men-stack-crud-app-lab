@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- update the header -->
+      <h1>Edit <%= car.Make%> <%= car.Model %></h1>
+  <!-- updated form -->
+
+<form action="/cars/<%=car._id%>?_method=PUT" method="POST">
+    <label for="Year">Year:</label>
+    <input type="number" name="Year" id="car" value="<%= car.Year %>" /><br><br>
+
+    <label for="Make">Make:</label>
+    <input type="text" name="Make" id="car" value="<%= car.Make %>"/><br><br>
+
+    <label for="Model">Model:</label>
+    <input type="text" name="Model" id="car" value="<%= car.Model %>" /><br><br>
+
+    <label for="Trim">Trim:</label>
+    <input type="text" name="Trim" id="car"value="<%= car.Trim %>" /><br><br>
+
+    <label for="Price">Price:</label>
+    <input type="number" step="any" name="Price" id="car" value="<%= car.Price %>"/><br><br>
+
+    <label for="Description">Description:</label>
+    <textarea type="textarea" step="any" name="Description" id="car" rows="10" cols="100" ><%= car.Description %></textarea><br><br>
+
+    <button type="submit">Update Car</button>
+  </form>
+  
+      <a href="/carscoll">Back to Cars Collection</a>
+</body>
+</html>
